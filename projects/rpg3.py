@@ -39,22 +39,22 @@ rooms = {
             'Hall' : {
                   'south' : 'Kitchen',
                   'east' : 'Dining Room',
-                  'item' : 'key',
+                  'item' : 'Covid-Mask',
                   'north' : 'Basement',
                   'west' : 'Upstairs Hall',
-                  'item2' : 'Ball'
+                  'item2' : 'Buschs Baked Beans'
                 },
 
             'Kitchen' : {
                   'north' : 'Hall',
                   'east' : 'Garage',
                   'west' : 'Upstairs Hall',
-                  'item' : 'monster'
+                  'item' : 'Angry Red-Headed Python Instructor'
                 },
             'Dining Room' : {
                   'west' : 'Hall',
                   'south' : 'Garage',
-                  'item' : 'potion',
+                  'item' : 'Vaccine Papers',
                   'north' : 'Pantry'
                },
             'Garage' : {
@@ -170,7 +170,7 @@ while True:
        #print('Can\'t take ' + move[1] + '!')
 
   ## Define how a player can win
-  if currentRoom == 'Garage' and 'key' in inventory and 'potion' in inventory:
+  if currentRoom == 'Garage' and 'Covid-Mask' in inventory and 'Vaccine Papers' in inventory:
     print('You escaped the house with the ultra rare key and magic potion... YOU WIN!')
     break
 
