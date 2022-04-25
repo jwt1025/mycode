@@ -76,7 +76,7 @@ rooms = {
                   'north' : 'Bedroom',
                   'west' : 'Bathroom',
                   'east' : 'Hall',
-                  'item' : 'whip and chains.'
+                  'item' : 'whip and chains'
                   },
             'Bedroom' : {
                   'east' : 'Attic',
@@ -151,9 +151,14 @@ while True:
       #delete the item from the room
       del rooms[currentRoom]['item']
     #otherwise, if the item isn't there to get
-    else:
+
+  if "item2" in rooms[currentRoom] and move[1] in rooms[currentRoom]['item2']:
+      inventory += [move[1]]
+      print(move[1] + ' got!')
+      del rooms[currentRoom]['item']
+  else:
       #tell them they can't get it
-      print('Can\'t get ' + move[1] + '!')
+        print('Can\'t get ' + move[1] + '!')
 
   if move[0] == 'take':
      #if the room contains an item, and the item is the one they want to get
